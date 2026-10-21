@@ -1,0 +1,101 @@
+// build-poster.js
+const fs = require('fs');
+const path = require('path');
+const sharp = require('sharp');
+
+const width = 1920;
+const height = 1080;
+
+const svgGraphic = `
+<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Deep Brand Gradients -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050a14"/>
+      <stop offset="50%" stop-color="#070e1b"/>
+      <stop offset="100%" stop-color="#0d1829"/>
+    </linearGradient>
+
+    <!-- Fiber Optic Highway Glow -->
+    <linearGradient id="stream1" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#2563eb" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="stream2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.1"/>
+      <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#93c5fd" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Structural Grid Overlay -->
+    <pattern id="gridPattern" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <!-- Base Dark Canvas -->
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <rect width="100%" height="100%" fill="url(#gridPattern)"/>
+
+  <!-- Operations Hub Ambient Glows -->
+  <circle cx="1520" cy="420" r="500" fill="#1d4ed8" opacity="0.18" filter="blur(120px)"/>
+  <circle cx="950" cy="850" r="400" fill="#2563eb" opacity="0.12" filter="blur(90px)"/>
+
+  <!-- Architectural Tower Vectors (Right Focus) -->
+  <g opacity="0.75">
+    <!-- Tower A -->
+    <polygon points="1220,1080 1220,380 1350,340 1350,1080" fill="#081426" stroke="#1d4ed8" stroke-width="1.5"/>
+    <line x1="1265" y1="390" x2="1265" y2="1080" stroke="#1e3a8a" stroke-width="1" stroke-dasharray="10 8"/>
+    <line x1="1310" y1="360" x2="1310" y2="1080" stroke="#1e3a8a" stroke-width="1" stroke-dasharray="10 8"/>
+
+    <!-- Central Headquarters Tower -->
+    <polygon points="1390,1080 1390,160 1620,90 1620,1080" fill="#0c1d36" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="1450" y1="200" x2="1450" y2="1080" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1.2" stroke-dasharray="14 10"/>
+    <line x1="1510" y1="160" x2="1510" y2="1080" stroke="#3b82f6" stroke-opacity="0.5" stroke-width="1.2" stroke-dasharray="14 10"/>
+    <line x1="1570" y1="120" x2="1570" y2="1080" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1.2" stroke-dasharray="14 10"/>
+
+    <!-- Tower C -->
+    <polygon points="1660,1080 1660,280 1840,240 1840,1080" fill="#091528" stroke="#1e3a8a" stroke-width="1.5"/>
+  </g>
+
+  <!-- Glowing Transit / Infrastructure Arcs -->
+  <path d="M 500 1080 C 950 940, 1220 800, 1500 480" fill="none" stroke="url(#stream1)" stroke-width="4"/>
+  <path d="M 680 1080 C 1100 910, 1380 750, 1680 390" fill="none" stroke="url(#stream2)" stroke-width="2.5" stroke-dasharray="12 8"/>
+  <path d="M 850 1080 C 1220 880, 1460 700, 1850 320" fill="none" stroke="#60a5fa" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Left Side Vignette for Content Readability -->
+  <rect width="1150" height="1080" fill="url(#bg)" opacity="0.92"/>
+</svg>
+`;
+
+async function generate() {
+  const targetDir = path.join(process.cwd(), 'public', 'images');
+  if (!fs.existsSync(targetDir)) {
+    fs.mkdirSync(targetDir, { recursive: true });
+  }
+
+  // Also write the raw SVG file for vector sharpness
+  const svgPath = path.join(targetDir, 'hero-corporate-poster.svg');
+  fs.writeFileSync(svgPath, svgGraphic.trim());
+  console.log(`SVG vector poster saved at: ${svgPath}`);
+
+  const outputPath = path.join(targetDir, 'hero-corporate-poster.jpg');
+
+  await sharp(Buffer.from(svgGraphic))
+    .jpeg({ quality: 92 })
+    .toFile(outputPath);
+
+  console.log(`Poster generated at: ${outputPath}`);
+
+  // Duplicate to assets/images for static fallbacks
+  const assetsDir = path.join(process.cwd(), 'assets', 'images');
+  if (fs.existsSync(assetsDir)) {
+    fs.copyFileSync(outputPath, path.join(assetsDir, 'hero-corporate-poster.jpg'));
+    fs.copyFileSync(svgPath, path.join(assetsDir, 'hero-corporate-poster.svg'));
+    console.log(`Poster mirrored to: ${assetsDir}`);
+  }
+}
+
+generate().catch(console.error);

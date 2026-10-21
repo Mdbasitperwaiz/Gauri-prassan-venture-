@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Directors | Gauri Prassan — Leadership & Governance</title>
+  <meta name="description" content="Meet the founding directors of Gauriprassan Ventures Private Limited — the visionaries driving Bihar's emerging manpower and facility management company.">
+  <link rel="canonical" href="https://www.gauriprassan.com/directors.html">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/design-system.css">
+  <style>
+    .director-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+    .director-card {
+      background: var(--surface-card, #111B32);
+      border: 1px solid rgba(71, 120, 255, 0.12);
+      border-radius: 24px;
+      overflow: hidden;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+      position: relative;
+    }
+    .director-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 64px rgba(71, 120, 255, 0.18);
+      border-color: rgba(71, 120, 255, 0.35);
+    }
+    .director-card__avatar-wrap {
+      position: relative;
+      background: linear-gradient(135deg, #0B1020 0%, #1A2744 100%);
+      padding: 2.5rem 2.5rem 0;
+      display: flex;
+      justify-content: center;
+    }
+    .director-card__badge {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: linear-gradient(135deg, #4778FF, #6490FF);
+      color: #fff;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+    }
+    .director-card__avatar-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid rgba(71, 120, 255, 0.4);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      flex-shrink: 0;
+    }
+    .director-card__avatar-initials {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid rgba(71, 120, 255, 0.4);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      background: linear-gradient(135deg, #1A2744, #0d1a3a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent-blue, #4778FF);
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+    .director-card__body {
+      padding: 1.75rem 2rem 2rem;
+      text-align: center;
+    }
+    .director-card__name {
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: var(--white, #fff);
+      margin-bottom: 0.3rem;
+      font-family: 'Manrope', sans-serif;
+    }
+    .director-card__role {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-blue, #4778FF);
+      margin-bottom: 1.25rem;
+    }
+    .director-card__divider {
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, #4778FF, #6490FF);
+      margin: 0 auto 1.25rem;
+      border-radius: 2px;
+    }
+    .director-card__bio {
+      font-size: 0.9375rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+    .director-card__meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      text-align: left;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+    }
+    .director-card__meta-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .director-card__meta-icon { font-size: 1rem; flex-shrink: 0; width: 1.25rem; text-align: center; }
+    .director-card__meta-label { font-weight: 600; color: rgba(255,255,255,0.85); min-width: 80px; }
+    .governance-strip {
+      background: linear-gradient(135deg, #07102B 0%, #0B1020 100%);
+      border-top: 1px solid rgba(71,120,255,0.12);
+      border-bottom: 1px solid rgba(71,120,255,0.12);
+      padding: 3rem 0;
+    }
+    .governance-strip__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    .governance-strip__item {
+      text-align: center;
+      padding: 1.5rem;
+      border-right: 1px solid rgba(255,255,255,0.06);
+    }
+    .governance-strip__item:last-child { border-right: none; }
+    .governance-strip__label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-blue, #4778FF); margin-bottom: 0.5rem; }
+    .governance-strip__value { font-size: 1.5rem; font-weight: 800; color: #fff; font-family: 'Manrope', sans-serif; }
+    .governance-strip__sub { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-top: 0.25rem; }
+    .governance-card {
+      background: linear-gradient(135deg, #111B32, #0d1a3a);
+      border: 1px solid rgba(71,120,255,0.12);
+      border-radius: 20px;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .governance-card:hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(71,120,255,0.12); }
+    .governance-card__icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      background: rgba(71,120,255,0.12);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .governance-card__title { font-size: 1.0625rem; font-weight: 700; color: #fff; margin-bottom: 0.35rem; }
+    .governance-card__text { font-size: 0.9rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+    @media (max-width: 768px) {
+      .governance-strip__grid { grid-template-columns: repeat(2, 1fr); }
+      .governance-strip__item { border-bottom: 1px solid rgba(255,255,255,0.06); }
+      .governance-strip__item:nth-child(2) { border-right: none; }
+      .governance-strip__item:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.06); border-bottom: none; }
+      .governance-strip__item:nth-child(4) { border-right: none; border-bottom: none; }
+    }
+  </style>
+</head>
+<body class="has-hiring-bar">
+
+  <div class="hiring-bar" id="hiring-bar" role="region" aria-label="Recruitment Announcement">
+    <div class="container hiring-bar__inner">
+      <div class="hiring-bar__content">
+        <span class="hiring-bar__badge">
+          <span class="hiring-bar__pulse" aria-hidden="true"></span>
+          WE ARE HIRING
+        </span>
+        <div class="hiring-bar__text">
+          <span class="hiring-bar__lead">Active Openings across 13 Bihar Districts:</span>
+          <span class="hiring-bar__districts">Bhojpur &bull; Arwal &bull; Patna &bull; Jehanabad &bull; Rohtas &bull; Kaimur &bull; Nawada &bull; Saran &bull; Gopalganj &bull; Gaya &bull; Siwan &bull; Buxar &bull; Aurangabad</span>
+        </div>
+      </div>
+      <div class="hiring-bar__actions">
+        <a href="contact.html?type=hiring" class="hiring-bar__btn">Apply Now &rarr;</a>
+        <button type="button" class="hiring-bar__close" id="close-hiring-bar" aria-label="Dismiss notification" title="Dismiss notification">&times;</button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar--scrolled" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="Gauriprassan Ventures — Home">
+          <div class="navbar__logo-box">
+            <img src="/images/logo.png" onerror="this.onerror=null;this.src='assets/images/logo.png';" alt="Gauriprassan Ventures Logo">
+          </div>
+          <div class="navbar__logo-text">
+            <span class="navbar__logo-name">Gauriprassan Ventures</span>
+            <span class="navbar__logo-tagline">Private Limited &bull; Inc. 2024</span>
+          </div>
+        </a>
+        <div class="navbar__nav">
+          <a href="index.html" class="navbar__link">Home</a>
+          <a href="about.html" class="navbar__link">About</a>
+          <div class="navbar__dropdown">
+            <a href="services.html" class="navbar__link navbar__dropdown-toggle">
+              Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:2px;"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+            <div class="navbar__dropdown-menu">
+              <div class="navbar__dropdown-title">Manpower Solutions</div>
+              <a href="services.html#manpower" class="navbar__dropdown-item">
+                <span class="navbar__dropdown-item-icon">👥</span>
+                <span>Manpower Outsourcing</span>
+              </a>
+              <a href="services.html#facility" class="navbar__dropdown-item">
+                <span class="navbar__dropdown-item-icon">🏢</span>
+                <span>Facility Management</span>
+              </a>
+              <a href="services.html#recruitment" class="navbar__dropdown-item">
+                <span class="navbar__dropdown-item-icon">🔍</span>
+                <span>Recruitment Support</span>
+              </a>
+              <a href="services.html#ict" class="navbar__dropdown-item">
+                <span class="navbar__dropdown-item-icon">💻</span>
+                <span>ICT Lab Solutions</span>
+              </a>
+            </div>
+          </div>
+          <a href="industries.html" class="navbar__link">Industries</a>
+          <a href="vision.html" class="navbar__link">Vision 2030</a>
+          <a href="directors.html" class="navbar__link navbar__link--active">Directors</a>
+          <a href="documents.html" class="navbar__link">Documents</a>
+          <a href="contact.html" class="navbar__cta">Get in Touch</a>
+        </div>
+        <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="navbar__drawer" id="mobile-drawer">
+    <div class="navbar__drawer-links">
+      <a href="index.html" class="navbar__drawer-link">Home</a>
+      <a href="about.html" class="navbar__drawer-link">About</a>
+      <a href="services.html" class="navbar__drawer-link">Services</a>
+      <a href="industries.html" class="navbar__drawer-link">Industries</a>
+      <a href="vision.html" class="navbar__drawer-link">Vision 2030</a>
+      <a href="directors.html" class="navbar__drawer-link navbar__link--active">Directors</a>
+      <a href="documents.html" class="navbar__drawer-link">Documents</a>
+    </div>
+    <a href="contact.html" class="navbar__drawer-cta">Get in Touch &rarr;</a>
+  </div>
+
+  <section class="page-hero" aria-label="Directors page hero" style="position:relative;overflow:hidden;background:#070e1b;padding:calc(var(--nav-height) + 3rem) 0 4.5rem;">
+    <!-- Background Vector Poster: /images/hero-corporate-poster.svg -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-30 filter brightness-90 contrast-125" style="position:absolute;inset:0;background-image:url('/images/hero-corporate-poster.svg'), url('public/images/hero-corporate-poster.svg');background-size:cover;background-position:center;opacity:0.30;filter:brightness(0.90) contrast(1.25);pointer-events:none;" aria-hidden="true"></div>
+    <!-- Dark Gradient Overlay for Maximum Text Contrast -->
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(7,14,27,0.7) 0%, rgba(7,14,27,0.9) 60%, #070e1b 100%);pointer-events:none;" aria-hidden="true"></div>
+    <div class="page-hero__pattern" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-hero__content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep">/</span>
+          <span class="breadcrumb__current" aria-current="page">Our Directors</span>
+        </nav>
+        <h1 class="hero__title" style="font-size:clamp(2rem,5vw,3.5rem);margin-bottom:1rem;">Our <em>Leadership</em> Team</h1>
+        <p style="font-size:1.125rem;color:rgba(255,255,255,0.72);max-width:580px;line-height:1.7;">
+          The founding directors of Gauriprassan Ventures Private Limited — visionaries committed to transforming Bihar's workforce and facility management landscape.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="governance-strip">
+    <div class="container">
+      <div class="governance-strip__grid">
+        <div class="governance-strip__item">
+          <div class="governance-strip__label">Company Type</div>
+          <div class="governance-strip__value">Pvt. Ltd.</div>
+          <div class="governance-strip__sub">Private Limited Company</div>
+        </div>
+        <div class="governance-strip__item">
+          <div class="governance-strip__label">CIN</div>
+          <div class="governance-strip__value" style="font-size:0.9rem;letter-spacing:0.03em;">U78300BR2024PTC068100</div>
+          <div class="governance-strip__sub">MCA Registered</div>
+        </div>
+        <div class="governance-strip__item">
+          <div class="governance-strip__label">Incorporated</div>
+          <div class="governance-strip__value">4 Mar 2024</div>
+          <div class="governance-strip__sub">Arrah, Bhojpur, Bihar</div>
+        </div>
+        <div class="governance-strip__item">
+          <div class="governance-strip__label">Status</div>
+          <div class="governance-strip__value" style="color:#25D366;">Active &#10003;</div>
+          <div class="governance-strip__sub">ROC Bihar &amp; Jharkhand</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section--white" aria-label="Director profiles">
+    <div class="container">
+      <div class="section-label animate-on-scroll">Company Leadership</div>
+      <h2 class="section-title animate-on-scroll">Meet the <span style="color:var(--accent-blue);">Directors</span></h2>
+      <p class="section-subtitle animate-on-scroll" style="max-width:640px;">
+        Our directors bring together operational expertise, strategic vision, and deep community roots to build a company that makes a lasting difference.
+      </p>
+
+      <div class="director-grid">
+        <div class="director-card animate-on-scroll">
+          <div class="director-card__avatar-wrap">
+            <div class="director-card__badge">FOUNDER &amp; DIRECTOR</div>
+            <img src="public/images/directors/navin-kumar.jpg" onerror="this.onerror=null;this.src='assets/images/directors/navin-kumar.jpg';" alt="Navin Kumar - Founder &amp; Managing Director" class="director-card__avatar-img">
+          </div>
+          <div class="director-card__body">
+            <div class="director-card__name">Navin Kumar</div>
+            <div class="director-card__role">Founder &amp; Managing Director</div>
+            <div class="director-card__divider"></div>
+            <p class="director-card__bio">
+              Founder and Managing Director leading Gauriprassan Ventures Private Limited. Focused on creating transparent workforce ecosystems, facility management operations, and technology-enabled employment across 13 districts of Bihar.
+            </p>
+            <div class="director-card__meta">
+              <div class="director-card__meta-row">
+                <span class="director-card__meta-icon">&#127970;</span>
+                <span class="director-card__meta-label">Designation:</span>
+                <span>Founder &amp; Managing Director</span>
+              </div>
+              <div class="director-card__meta-row">
+                <span class="director-card__meta-icon">&#128205;</span>
+                <span class="director-card__meta-label">Location:</span>
+                <span>Arrah, Bhojpur, Bihar – 802301</span>
+              </div>
+              <div class="director-card__meta-row">
+                <span class="director-card__meta-icon">&#9878;&#65039;</span>
+                <span class="director-card__meta-label">DIN:</span>
+                <span style="font-family:monospace;font-weight:700;color:#60a5fa;letter-spacing:0.05em;">09459907</span>
+              </div>
+              <div class="director-card__meta-row">
+                <span class="director-card__meta-icon">&#128179;</span>
+                <span class="director-card__meta-label">PAN:</span>
+                <span style="font-family:monospace;font-weight:700;color:#60a5fa;letter-spacing:0.05em;">CAEPK4003K</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="director-card animate-on-scroll animate-delay-2">
+          <div class="director-card__avatar-wrap">
+            <div class="director-card__badge">DIRECTOR</div>
+            <div class="director-card__avatar-initials">AR</div>
+          </div>
+          <div class="director-card__body">
+            <div class="director-card__name">Amit Roy</div>
+            <div class="director-card__role">Director — Operations &amp; Compliance</div>
+            <div class="director-card__divider"></div>
+            <p class="director-card__bio">
+              Responsible for operational oversight, client delivery frameworks, statutory labor compliance, and vendor relationship management across Bihar.
+            </p>
+            <div class="director-card__meta">
+              <div class="director-card__meta-row">
+                <span class="director-card__meta-icon">&#127970;</span>
+                <span class="director-card__meta-label">Designation:</span>
+                <span>Director — Operations &amp; Compliance</span>
+              </div>
+              <div class="director-card__meta-row">
+                <span class="director-card__meta-icon">&#128205;</span>
+                <span class="director-card__meta-label">Location:</span>
+                <span>Arrah, Bhojpur, Bihar – 802301</span>
+              </div>
+              <div class="director-card__meta-row">
+                <span class="director-card__meta-icon">&#9878;&#65039;</span>
+                <span class="director-card__meta-label">DIN:</span>
+                <span style="font-family:monospace;font-weight:700;color:#60a5fa;letter-spacing:0.05em;">09459908</span>
+              </div>
+              <div class="director-card__meta-row">
+                <span class="director-card__meta-icon">&#128179;</span>
+                <span class="director-card__meta-label">PAN:</span>
+                <span style="font-family:monospace;font-weight:700;color:#60a5fa;letter-spacing:0.05em;">AJNPR9096F</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:2rem;font-size:0.875rem;color:rgba(0,0,0,0.4);">
+        * Director details can be verified on the <a href="https://www.mca.gov.in/content/mca/global/en/mca/master-data/MDS.html" target="_blank" rel="noopener noreferrer" style="color:var(--accent-blue);">MCA Master Data portal</a> using CIN U78300BR2024PTC068100.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--bg-dark,#07102B);" aria-label="Corporate governance">
+    <div class="container">
+      <div class="section-label animate-on-scroll" style="color:var(--accent-blue);">Corporate Governance</div>
+      <h2 class="section-title animate-on-scroll" style="color:#fff;">Our Governance <span style="color:var(--accent-blue);">Framework</span></h2>
+      <p style="color:rgba(255,255,255,0.6);max-width:600px;line-height:1.8;margin-bottom:3rem;" class="animate-on-scroll">
+        Gauriprassan Ventures operates with full statutory compliance, transparent operations, and a commitment to ethical business practices.
+      </p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+        <div class="governance-card animate-on-scroll">
+          <div class="governance-card__icon">&#127963;&#65039;</div>
+          <div>
+            <div class="governance-card__title">MCA Compliant</div>
+            <div class="governance-card__text">Registered with the Ministry of Corporate Affairs under the Companies Act, 2013. All filings are current and up to date.</div>
+          </div>
+        </div>
+        <div class="governance-card animate-on-scroll animate-delay-2">
+          <div class="governance-card__icon">&#129534;</div>
+          <div>
+            <div class="governance-card__title">GST Registered</div>
+            <div class="governance-card__text">GSTIN: 10AALCG0831H1Z3. Fully registered under the Goods and Services Tax Act with regular return compliance.</div>
+          </div>
+        </div>
+        <div class="governance-card animate-on-scroll animate-delay-3">
+          <div class="governance-card__icon">&#128203;</div>
+          <div>
+            <div class="governance-card__title">Labour Law Adherence</div>
+            <div class="governance-card__text">Committed to full compliance with PF, ESIC, minimum wage regulations and all applicable labour laws across every district of operation.</div>
+          </div>
+        </div>
+        <div class="governance-card animate-on-scroll animate-delay-4">
+          <div class="governance-card__icon">&#128274;</div>
+          <div>
+            <div class="governance-card__title">Transparent Operations</div>
+            <div class="governance-card__text">All service agreements, billing and reporting are conducted with complete transparency. Clients receive detailed monthly compliance reports.</div>
+          </div>
+        </div>
+        <div class="governance-card animate-on-scroll">
+          <div class="governance-card__icon">&#128194;</div>
+          <div>
+            <div class="governance-card__title">Document Repository</div>
+            <div class="governance-card__text">Key company documents including certificates and filings are maintained and accessible. <a href="documents.html" style="color:var(--accent-blue);">View Document Portal &rarr;</a></div>
+          </div>
+        </div>
+        <div class="governance-card animate-on-scroll animate-delay-2">
+          <div class="governance-card__icon">&#129309;</div>
+          <div>
+            <div class="governance-card__title">Ethical Leadership</div>
+            <div class="governance-card__text">Our directors are personally committed to fair employment practices, worker welfare and long-term stakeholder value creation.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" aria-label="Connect with leadership">
+    <div class="container" style="text-align:center;">
+      <div class="section-label animate-on-scroll">Get in Touch</div>
+      <h2 class="section-title animate-on-scroll">Connect with <span style="color:var(--accent-blue);">Our Team</span></h2>
+      <p style="color:var(--text-secondary);max-width:520px;margin:0 auto 2.5rem;line-height:1.8;" class="animate-on-scroll">
+        Have a business enquiry or partnership proposal? Our directors are accessible and responsive.
+      </p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;" class="animate-on-scroll">
+        <a href="contact.html" class="btn btn--primary" id="dir-contact-btn">&#128233; Contact Us</a>
+        <a href="tel:+919334166175" class="btn btn--outline" id="dir-call-btn">&#128222; +91 9334166175</a>
+        <a href="#" onclick="window.open('https://wa.me/919334166175','_blank','noopener,noreferrer');return false;" class="btn btn--wa" id="dir-wa-btn">&#128172; WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">
+            <img src="assets/images/logo.png" alt="Gauri Prassan" class="footer__logo-img" onerror="this.style.display='none'">
+            <span class="footer__logo-name">Gauri Prassan</span>
+          </div>
+          <p class="footer__desc">Gauriprassan Ventures Private Limited &mdash; delivering manpower outsourcing and facility management solutions with reliability, transparency and technology-enabled operations.</p>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Navigation</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="about.html" class="footer__link">About Us</a></li>
+            <li><a href="services.html" class="footer__link">Services</a></li>
+            <li><a href="industries.html" class="footer__link">Industries</a></li>
+            <li><a href="vision.html" class="footer__link">Vision 2030</a></li>
+            <li><a href="directors.html" class="footer__link">Directors</a></li>
+            <li><a href="documents.html" class="footer__link">Documents</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Services</h3>
+          <ul class="footer__links">
+            <li><a href="services.html" class="footer__link">Manpower Outsourcing</a></li>
+            <li><a href="services.html" class="footer__link">Facility Management</a></li>
+            <li><a href="services.html" class="footer__link">Recruitment Support</a></li>
+            <li><a href="services.html" class="footer__link">AI-Enabled Operations</a></li>
+            <li><a href="contact.html#ict-lab" class="footer__link">ICT Lab Enquiry</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Contact</h3>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">&#128231;</span>
+            <div class="footer__contact-text"><a href="mailto:gauriprassanventures@gmail.com">gauriprassanventures@gmail.com</a></div>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">&#128222;</span>
+            <div class="footer__contact-text">
+              <a href="tel:+919334166175">+91 9334166175</a>
+            </div>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">&#128205;</span>
+            <div class="footer__contact-text">Arrah, Bhojpur, Bihar &ndash; 802301</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; <span class="js-year">2026</span> Gauriprassan Ventures Private Limited. All rights reserved.</p>
+        <p class="footer__legal">CIN: U78300BR2024PTC068100 &nbsp;|&nbsp; GSTIN: 10AALCG0831H1Z3</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" onclick="window.open('https://wa.me/919334166175','_blank','noopener,noreferrer');return false;" class="wa-fab" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
