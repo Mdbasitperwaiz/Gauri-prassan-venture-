@@ -561,3 +561,40 @@ html.js-ready .animate-on-scroll.visible{opacity:1;transform:translateY(0)}
   .card{padding:var(--sp-6)}
   .contact-card{flex-direction:column}
 }
+
+/* ── Responsive Grid & Focus Accessibility Utilities ──────── */
+.grid-responsive-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+.grid-responsive-2--top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+.grid-responsive-contact {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+@media (max-width: 900px) {
+  .grid-responsive-2,
+  .grid-responsive-2--top,
+  .grid-responsive-contact {
+    grid-template-columns: 1fr !important;
+    gap: 2.25rem !important;
+  }
+}
+.form-control:focus,
+.form-control:focus-visible,
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-blue) !important;
+  outline-offset: 2px !important;
+}
+

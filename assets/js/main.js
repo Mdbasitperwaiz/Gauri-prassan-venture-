@@ -26,6 +26,7 @@ const GP_CONFIG = {
   // Check if previously dismissed in this session
   if (sessionStorage.getItem('gp_hiring_bar_dismissed') === 'true') {
     document.body.classList.remove('has-hiring-bar');
+    bar.style.display = 'none';
   } else {
     document.body.classList.add('has-hiring-bar');
   }
@@ -33,6 +34,7 @@ const GP_CONFIG = {
   if (closeBtn) {
     closeBtn.addEventListener('click', function () {
       document.body.classList.remove('has-hiring-bar');
+      bar.style.display = 'none';
       sessionStorage.setItem('gp_hiring_bar_dismissed', 'true');
     });
   }
@@ -105,11 +107,15 @@ const GP_CONFIG = {
     });
   }
 
-  // Active link highlight
-  var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  // Active link highlight (supports both .html and clean URLs)
+  var currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+  var currentSlug = currentPath.split('/').pop().replace(/\.html$/, '') || 'index';
   document.querySelectorAll('.navbar__link, .navbar__drawer-link').forEach(function (link) {
-    var href = link.getAttribute('href') || '';
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    var rawHref = link.getAttribute('href') || '';
+    if (rawHref.startsWith('#')) return;
+    var linkPath = rawHref.split('#')[0].replace(/\/$/, '').replace(/^\//, '');
+    var linkSlug = linkPath.split('/').pop().replace(/\.html$/, '') || 'index';
+    if (currentSlug === linkSlug) {
       link.classList.add('navbar__link--active');
     }
   });
@@ -205,12 +211,10 @@ var FormValidator = {
 
 /* ── WhatsApp Helper ───────────────────────────────────────── */
 function openWhatsApp(message) {
-  var num = GP_CONFIG.WHATSAPP_NUMBER;
-  if (!num || num === 'REPLACE_WITH_CLIENT_APPROVED_NUMBER') {
-    alert('WhatsApp contact number not yet configured. Please contact us at ' + GP_CONFIG.EMAIL);
-    return;
-  }
-  var encoded = encodeURIComponent(message);
+  var num = GP_CONFIG.WHATSAPP_NUMBER || '919334166175';
+  var defaultGreeting = 'Hello Gauri Prassan, I would like to enquire about your services.';
+  var text = (typeof message === 'string' && message.trim().length > 0) ? message : defaultGreeting;
+  var encoded = encodeURIComponent(text);
   var url = 'https://wa.me/' + num + '?text=' + encoded;
   window.open(url, '_blank', 'noopener,noreferrer');
 }

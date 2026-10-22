@@ -4,14 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gauri Prassan | People. Operations. Progress.</title>
-  <meta name="description" content="Gauriprassan Ventures Private Limited — delivering workforce and facility management solutions with a focus on reliability, operational quality and technology-enabled growth across India.">
-  <meta name="keywords" content="Gauri Prassan, manpower outsourcing, facility management, workforce solutions, Bihar, India">
-  <meta property="og:title" content="Gauri Prassan | People. Operations. Progress.">
-  <meta property="og:description" content="India's emerging manpower outsourcing and facility management company. Where Ideas Rise and Futures Shine.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.gauriprassan.com/">
+  <meta name="description" content="Gauriprassan Ventures Private Limited (Gauri Prassan) — delivering verified manpower outsourcing and facility management solutions with total labor compliance across Bihar & India.">
   <link rel="canonical" href="https://www.gauriprassan.com/">
   <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.gauriprassan.com/">
+  <meta property="og:title" content="Gauri Prassan | People. Operations. Progress.">
+  <meta property="og:description" content="Enterprise workforce outsourcing and integrated facility management company in Bihar & India. Where Ideas Rise and Futures Shine.">
+  <meta property="og:image" content="https://www.gauriprassan.com/assets/images/about_team.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.gauriprassan.com/">
+  <meta name="twitter:title" content="Gauri Prassan | People. Operations. Progress.">
+  <meta name="twitter:description" content="Enterprise workforce outsourcing and integrated facility management company in Bihar & India. Where Ideas Rise and Futures Shine.">
+  <meta name="twitter:image" content="https://www.gauriprassan.com/assets/images/about_team.jpg">
+
+  <!-- Organization JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Gauri Prassan",
+    "legalName": "Gauriprassan Ventures Private Limited",
+    "url": "https://www.gauriprassan.com",
+    "logo": "https://www.gauriprassan.com/assets/images/logo.png",
+    "description": "Enterprise workforce outsourcing, facility management, recruitment and technology-enabled operations across Bihar & India.",
+    "telephone": "+919334166175",
+    "email": "gauriprassanventures@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ground Floor, Hanuman Nagar, Ward No. 4, Block-Arrah, Near Overbridge, Milki Anaith",
+      "addressLocality": "Arrah, Bhojpur",
+      "addressRegion": "Bihar",
+      "postalCode": "802301",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="assets/css/design-system.css">
 </head>
 <body class="has-hiring-bar">
@@ -30,8 +64,8 @@
         </div>
       </div>
       <div class="hiring-bar__actions">
-        <a href="contact.html?type=hiring" class="hiring-bar__btn">Apply Now →</a>
-        <button type="button" class="hiring-bar__close" id="close-hiring-bar" aria-label="Dismiss notification" title="Dismiss notification">&times;</button>
+        <a href="/contact?type=hiring" class="hiring-bar__btn">Apply Now →</a>
+        <button type="button" class="hiring-bar__close" id="close-hiring-bar" aria-label="Dismiss hiring banner" title="Dismiss notification">&times;</button>
       </div>
     </div>
   </div>
@@ -40,7 +74,7 @@
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container">
       <div class="navbar__inner">
-        <a href="index.html" class="navbar__logo" aria-label="Gauriprassan Ventures — Home">
+        <a href="/" class="navbar__logo" aria-label="Gauriprassan Ventures — Home">
           <div class="navbar__logo-box">
             <img src="/images/logo.png" onerror="this.onerror=null;this.src='assets/images/logo.png';" alt="Gauriprassan Ventures Logo">
           </div>
@@ -50,37 +84,45 @@
           </div>
         </a>
         <div class="navbar__nav" role="menubar">
-          <a href="index.html" class="navbar__link navbar__link--active" role="menuitem">Home</a>
-          <a href="about.html" class="navbar__link" role="menuitem">About</a>
+          <a href="/" class="navbar__link navbar__link--active" role="menuitem">Home</a>
+          <a href="/about" class="navbar__link" role="menuitem">About</a>
           <div class="navbar__dropdown">
-            <a href="services.html" class="navbar__link navbar__dropdown-toggle" role="menuitem">
+            <a href="/services" class="navbar__link navbar__dropdown-toggle" role="menuitem">
               Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:2px;"><path d="m6 9 6 6 6-6"/></svg>
             </a>
             <div class="navbar__dropdown-menu" role="menu">
               <div class="navbar__dropdown-title">Manpower Solutions</div>
-              <a href="services.html#manpower" class="navbar__dropdown-item" role="menuitem">
-                <span class="navbar__dropdown-item-icon">👥</span>
+              <a href="/services#manpower" class="navbar__dropdown-item" role="menuitem">
+                <span class="navbar__dropdown-item-icon" aria-hidden="true">👥</span>
                 <span>Manpower Outsourcing</span>
               </a>
-              <a href="services.html#facility" class="navbar__dropdown-item" role="menuitem">
-                <span class="navbar__dropdown-item-icon">🏢</span>
+              <a href="/services#facility" class="navbar__dropdown-item" role="menuitem">
+                <span class="navbar__dropdown-item-icon" aria-hidden="true">🏢</span>
                 <span>Facility Management</span>
               </a>
-              <a href="services.html#recruitment" class="navbar__dropdown-item" role="menuitem">
-                <span class="navbar__dropdown-item-icon">🔍</span>
+              <a href="/services#recruitment" class="navbar__dropdown-item" role="menuitem">
+                <span class="navbar__dropdown-item-icon" aria-hidden="true">🔍</span>
                 <span>Recruitment Support</span>
               </a>
-              <a href="services.html#ict" class="navbar__dropdown-item" role="menuitem">
-                <span class="navbar__dropdown-item-icon">💻</span>
+              <a href="/services#tech-ops" class="navbar__dropdown-item" role="menuitem">
+                <span class="navbar__dropdown-item-icon" aria-hidden="true">🤖</span>
+                <span>Tech-Enabled Operations</span>
+              </a>
+              <a href="/services#ict" class="navbar__dropdown-item" role="menuitem">
+                <span class="navbar__dropdown-item-icon" aria-hidden="true">💻</span>
                 <span>ICT Lab Solutions</span>
+              </a>
+              <a href="/services#support" class="navbar__dropdown-item" role="menuitem">
+                <span class="navbar__dropdown-item-icon" aria-hidden="true">📊</span>
+                <span>Operational Support</span>
               </a>
             </div>
           </div>
-          <a href="industries.html" class="navbar__link" role="menuitem">Industries</a>
-          <a href="vision.html" class="navbar__link" role="menuitem">Vision 2030</a>
-          <a href="directors.html" class="navbar__link" role="menuitem">Directors</a>
-          <a href="documents.html" class="navbar__link" role="menuitem">Documents</a>
-          <a href="contact.html" class="navbar__cta" role="menuitem">Get in Touch</a>
+          <a href="/industries" class="navbar__link" role="menuitem">Industries</a>
+          <a href="/vision" class="navbar__link" role="menuitem">Vision 2030</a>
+          <a href="/directors" class="navbar__link" role="menuitem">Directors</a>
+          <a href="/documents" class="navbar__link" role="menuitem">Documents</a>
+          <a href="/contact" class="navbar__cta" role="menuitem">Get in Touch</a>
         </div>
         <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
           <span class="navbar__toggle-bar"></span>
@@ -94,15 +136,15 @@
   <!-- Mobile Drawer -->
   <div class="navbar__drawer" id="mobile-drawer" aria-hidden="true">
     <div class="navbar__drawer-links">
-      <a href="index.html" class="navbar__drawer-link">Home</a>
-      <a href="about.html" class="navbar__drawer-link">About</a>
-      <a href="services.html" class="navbar__drawer-link">Services</a>
-      <a href="industries.html" class="navbar__drawer-link">Industries</a>
-      <a href="vision.html" class="navbar__drawer-link">Vision 2030</a>
-      <a href="directors.html" class="navbar__drawer-link">Directors</a>
-      <a href="documents.html" class="navbar__drawer-link">Documents</a>
+      <a href="/" class="navbar__drawer-link">Home</a>
+      <a href="/about" class="navbar__drawer-link">About</a>
+      <a href="/services" class="navbar__drawer-link">Services</a>
+      <a href="/industries" class="navbar__drawer-link">Industries</a>
+      <a href="/vision" class="navbar__drawer-link">Vision 2030</a>
+      <a href="/directors" class="navbar__drawer-link">Directors</a>
+      <a href="/documents" class="navbar__drawer-link">Documents</a>
     </div>
-    <a href="contact.html" class="navbar__drawer-cta">Get in Touch →</a>
+    <a href="/contact" class="navbar__drawer-cta">Get in Touch →</a>
   </div>
 
   <!-- ── Hero Section: Single Crisp Background, No Duplicate Right Card ────── -->
@@ -130,28 +172,28 @@
         </p>
 
         <div class="hero__actions" style="margin-bottom:2.5rem;display:flex;flex-wrap:wrap;gap:1rem;">
-          <a href="services.html" class="btn btn--primary btn--lg" style="box-shadow:0 10px 25px -5px rgba(37,99,235,0.4);display:inline-flex;align-items:center;gap:0.5rem;padding:0.9rem 2rem;font-size:0.95rem;">
+          <a href="/services" class="btn btn--primary btn--lg" style="box-shadow:0 10px 25px -5px rgba(37,99,235,0.4);display:inline-flex;align-items:center;gap:0.5rem;padding:0.9rem 2rem;font-size:0.95rem;">
             Explore Our Services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
           </a>
-          <a href="contact.html" class="btn btn--secondary btn--lg" style="background:#0d1829;border:1px solid #334155;padding:0.9rem 2rem;font-size:0.95rem;">
+          <a href="/contact" class="btn btn--secondary btn--lg" style="background:#0d1829;border:1px solid #334155;padding:0.9rem 2rem;font-size:0.95rem;">
             Contact Us
           </a>
         </div>
 
         <!-- Real Trust & Statutory Badges -->
         <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(210px, 1fr));gap:0.75rem;padding-top:1.75rem;border-top:1px solid rgba(51,65,85,0.8);">
-          <div style="display:flex;align-items:center;gap:0.6rem;background:rgba(13,24,41,0.7);padding:0.7rem 0.9rem;border-radius:10px;border:1px solid #1e293b;font-size:0.775rem;color:#cbd5e1;">
+          <a href="/documents#doc-coi" style="display:flex;align-items:center;gap:0.6rem;background:rgba(13,24,41,0.7);padding:0.7rem 0.9rem;border-radius:10px;border:1px solid #1e293b;font-size:0.775rem;color:#cbd5e1;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#3b82f6'" onmouseout="this.style.borderColor='#1e293b'">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
             <span>MCA Registered (CIN: U78300BR2024PTC068100)</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:0.6rem;background:rgba(13,24,41,0.7);padding:0.7rem 0.9rem;border-radius:10px;border:1px solid #1e293b;font-size:0.775rem;color:#cbd5e1;">
+          </a>
+          <a href="/documents#doc-epfo" style="display:flex;align-items:center;gap:0.6rem;background:rgba(13,24,41,0.7);padding:0.7rem 0.9rem;border-radius:10px;border:1px solid #1e293b;font-size:0.775rem;color:#cbd5e1;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#3b82f6'" onmouseout="this.style.borderColor='#1e293b'">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
             <span>100% EPF &amp; ESIC Compliant</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:0.6rem;background:rgba(13,24,41,0.7);padding:0.7rem 0.9rem;border-radius:10px;border:1px solid #1e293b;font-size:0.775rem;color:#cbd5e1;">
+          </a>
+          <a href="/documents#doc-iso-9001" style="display:flex;align-items:center;gap:0.6rem;background:rgba(13,24,41,0.7);padding:0.7rem 0.9rem;border-radius:10px;border:1px solid #1e293b;font-size:0.775rem;color:#cbd5e1;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#3b82f6'" onmouseout="this.style.borderColor='#1e293b'">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
             <span>ISO 9001 &amp; 45001 Certified</span>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -165,7 +207,7 @@
   <!-- ── Our Promise ───────────────────────────────────────── -->
   <section class="section section--white" id="promise">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+      <div class="grid-responsive-2">
         <div class="animate-on-scroll">
           <div class="section-label">Our Promise</div>
           <h2 class="section-title">Built on Trust,<br>Driven by Technology</h2>
@@ -175,7 +217,7 @@
           <p style="font-size:1.0625rem;color:var(--text-secondary);line-height:1.75;margin-bottom:2rem;">
             We ensure compliance with industry standards, provide skilled and reliable professionals, and integrate modern tools to streamline operations. Whether it is recruitment, facility upkeep or AI-driven analytics, our commitment is to excellence and innovation.
           </p>
-          <a href="about.html" class="btn btn--outline" style="color:var(--navy-deep);border-color:var(--navy-mid);background:transparent;" 
+          <a href="/about" class="btn btn--outline" style="color:var(--navy-deep);border-color:var(--navy-mid);background:transparent;" 
              onmouseover="this.style.background='var(--navy-mid)';this.style.color='white';" 
              onmouseout="this.style.background='transparent';this.style.color='var(--navy-deep)';">
             Learn About Us →
@@ -199,56 +241,56 @@
 
       <div class="grid grid-3">
         <div class="card animate-on-scroll animate-delay-1">
-          <div class="card__icon">👥</div>
+          <div class="card__icon" aria-hidden="true">👥</div>
           <h3 class="card__title">Manpower Outsourcing</h3>
           <p class="card__body">Providing skilled workforce solutions to organisations across government, healthcare, education and corporate sectors, ensuring operational continuity and quality staffing.</p>
           <br>
-          <a href="services.html" style="font-size:0.875rem;font-weight:600;color:var(--accent-blue);display:inline-flex;align-items:center;gap:0.5rem;">Learn More →</a>
+          <a href="/services#manpower" style="font-size:0.875rem;font-weight:600;color:var(--accent-blue);display:inline-flex;align-items:center;gap:0.5rem;">Learn More →</a>
         </div>
 
         <div class="card animate-on-scroll animate-delay-2">
-          <div class="card__icon">🏢</div>
+          <div class="card__icon" aria-hidden="true">🏢</div>
           <h3 class="card__title">Facility Management</h3>
           <p class="card__body">Comprehensive facility management services designed to maintain and improve operational environments, from maintenance to administration support.</p>
           <br>
-          <a href="services.html" style="font-size:0.875rem;font-weight:600;color:var(--accent-blue);display:inline-flex;align-items:center;gap:0.5rem;">Learn More →</a>
+          <a href="/services#facility" style="font-size:0.875rem;font-weight:600;color:var(--accent-blue);display:inline-flex;align-items:center;gap:0.5rem;">Learn More →</a>
         </div>
 
         <div class="card animate-on-scroll animate-delay-3">
-          <div class="card__icon">🔍</div>
+          <div class="card__icon" aria-hidden="true">🔍</div>
           <h3 class="card__title">Recruitment Support</h3>
           <p class="card__body">End-to-end recruitment and workforce planning support, helping organisations identify and onboard the right talent efficiently and compliantly.</p>
           <br>
-          <a href="services.html" style="font-size:0.875rem;font-weight:600;color:var(--accent-blue);display:inline-flex;align-items:center;gap:0.5rem;">Learn More →</a>
+          <a href="/services#recruitment" style="font-size:0.875rem;font-weight:600;color:var(--accent-blue);display:inline-flex;align-items:center;gap:0.5rem;">Learn More →</a>
         </div>
 
         <div class="card animate-on-scroll animate-delay-1">
-          <div class="card__icon">🤖</div>
+          <div class="card__icon" aria-hidden="true">🤖</div>
           <h3 class="card__title">Technology-Enabled Operations</h3>
           <p class="card__body">Integrating AI-driven tools for attendance tracking, analytics and operational reporting to make workforce management smarter and more transparent.</p>
           <br>
-          <a href="services.html" style="font-size:0.875rem;font-weight:600;color:var(--accent-blue);display:inline-flex;align-items:center;gap:0.5rem;">Learn More →</a>
+          <a href="/services#tech-ops" style="font-size:0.875rem;font-weight:600;color:var(--accent-blue);display:inline-flex;align-items:center;gap:0.5rem;">Learn More →</a>
         </div>
 
         <div class="card animate-on-scroll animate-delay-2">
-          <div class="card__icon">🏫</div>
+          <div class="card__icon" aria-hidden="true">🏫</div>
           <h3 class="card__title">ICT Lab Solutions</h3>
-          <p class="card__body">Supporting educational institutions with ICT infrastructure enquiries, computer laboratory requirements and related workforce needs. Subject to confirmation of services offered.</p>
+          <p class="card__body">Turnkey computer lab setup, networking infrastructure, and dedicated technical instructors for schools, colleges, and training institutions.</p>
           <br>
-          <a href="contact.html#ict-lab" style="font-size:0.875rem;font-weight:600;color:var(--accent-blue);display:inline-flex;align-items:center;gap:0.5rem;">Enquire →</a>
+          <a href="/services#ict" style="font-size:0.875rem;font-weight:600;color:var(--accent-blue);display:inline-flex;align-items:center;gap:0.5rem;">Learn More →</a>
         </div>
 
         <div class="card animate-on-scroll animate-delay-3">
-          <div class="card__icon">📊</div>
+          <div class="card__icon" aria-hidden="true">📊</div>
           <h3 class="card__title">Operational Support</h3>
           <p class="card__body">Administrative, logistical and operational support services that help organisations run efficiently and reduce internal resource burdens.</p>
           <br>
-          <a href="services.html" style="font-size:0.875rem;font-weight:600;color:var(--accent-blue);display:inline-flex;align-items:center;gap:0.5rem;">Learn More →</a>
+          <a href="/services#support" style="font-size:0.875rem;font-weight:600;color:var(--accent-blue);display:inline-flex;align-items:center;gap:0.5rem;">Learn More →</a>
         </div>
       </div>
 
       <div style="text-align:center;margin-top:3rem;">
-        <a href="services.html" class="btn btn--dark btn--lg">View All Services</a>
+        <a href="/services" class="btn btn--dark btn--lg">View All Services</a>
       </div>
     </div>
   </section>
@@ -267,7 +309,7 @@
              onmouseover="this.style.background='rgba(71,120,255,0.12)';this.style.borderColor='rgba(71,120,255,0.35)'"
              onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.borderColor='rgba(255,255,255,0.1)'"
              class="animate-on-scroll animate-delay-1">
-          <div style="font-size:2.5rem;margin-bottom:1rem;">🏛️</div>
+          <div style="font-size:2.5rem;margin-bottom:1rem;" aria-hidden="true">🏛️</div>
           <h3 style="font-family:var(--font-display);font-size:1.125rem;font-weight:700;color:var(--white);margin-bottom:0.5rem;">Government</h3>
           <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);">Public sector organisations and government departments requiring reliable workforce solutions.</p>
         </div>
@@ -276,7 +318,7 @@
              onmouseover="this.style.background='rgba(71,120,255,0.12)';this.style.borderColor='rgba(71,120,255,0.35)'"
              onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.borderColor='rgba(255,255,255,0.1)'"
              class="animate-on-scroll animate-delay-2">
-          <div style="font-size:2.5rem;margin-bottom:1rem;">🏥</div>
+          <div style="font-size:2.5rem;margin-bottom:1rem;" aria-hidden="true">🏥</div>
           <h3 style="font-family:var(--font-display);font-size:1.125rem;font-weight:700;color:var(--white);margin-bottom:0.5rem;">Healthcare</h3>
           <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);">Hospitals, clinics and healthcare facilities that need qualified, compliant support staff.</p>
         </div>
@@ -285,7 +327,7 @@
              onmouseover="this.style.background='rgba(71,120,255,0.12)';this.style.borderColor='rgba(71,120,255,0.35)'"
              onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.borderColor='rgba(255,255,255,0.1)'"
              class="animate-on-scroll animate-delay-3">
-          <div style="font-size:2.5rem;margin-bottom:1rem;">🎓</div>
+          <div style="font-size:2.5rem;margin-bottom:1rem;" aria-hidden="true">🎓</div>
           <h3 style="font-family:var(--font-display);font-size:1.125rem;font-weight:700;color:var(--white);margin-bottom:0.5rem;">Education</h3>
           <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);">Schools, colleges and educational institutions requiring facility management and staffing support.</p>
         </div>
@@ -294,14 +336,14 @@
              onmouseover="this.style.background='rgba(71,120,255,0.12)';this.style.borderColor='rgba(71,120,255,0.35)'"
              onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.borderColor='rgba(255,255,255,0.1)'"
              class="animate-on-scroll animate-delay-4">
-          <div style="font-size:2.5rem;margin-bottom:1rem;">🏢</div>
+          <div style="font-size:2.5rem;margin-bottom:1rem;" aria-hidden="true">🏢</div>
           <h3 style="font-family:var(--font-display);font-size:1.125rem;font-weight:700;color:var(--white);margin-bottom:0.5rem;">Corporate</h3>
           <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);">Private companies and corporate organisations that demand professional, reliable manpower and facility services.</p>
         </div>
       </div>
 
       <div style="text-align:center;margin-top:3rem;">
-        <a href="industries.html" class="btn btn--secondary">Explore Industries</a>
+        <a href="/industries" class="btn btn--secondary">Explore Industries</a>
       </div>
     </div>
   </section>
@@ -309,34 +351,34 @@
   <!-- ── Why Choose Us ─────────────────────────────────────── -->
   <section class="section section--light" id="why-us">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+      <div class="grid-responsive-2">
         <div class="animate-on-scroll">
           <div class="section-label">Why Gauri Prassan</div>
           <h2 class="section-title">What Sets Us Apart</h2>
           <div style="margin-top:2rem;display:flex;flex-direction:column;gap:1.5rem;">
             <div style="display:flex;gap:1rem;align-items:flex-start;">
-              <div style="width:40px;height:40px;border-radius:10px;background:var(--accent-blue-l);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">✅</div>
+              <div style="width:40px;height:40px;border-radius:10px;background:var(--accent-blue-l);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;" aria-hidden="true">✅</div>
               <div>
                 <h4 style="font-family:var(--font-display);font-size:1rem;font-weight:700;margin-bottom:0.25rem;">Compliance-First Approach</h4>
                 <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;">We uphold industry standards and regulatory requirements at every stage of our operations.</p>
               </div>
             </div>
             <div style="display:flex;gap:1rem;align-items:flex-start;">
-              <div style="width:40px;height:40px;border-radius:10px;background:var(--accent-blue-l);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🔒</div>
+              <div style="width:40px;height:40px;border-radius:10px;background:var(--accent-blue-l);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;" aria-hidden="true">🔒</div>
               <div>
                 <h4 style="font-family:var(--font-display);font-size:1rem;font-weight:700;margin-bottom:0.25rem;">Transparency in Operations</h4>
                 <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;">Clear reporting, open communication and accountability are central to everything we do.</p>
               </div>
             </div>
             <div style="display:flex;gap:1rem;align-items:flex-start;">
-              <div style="width:40px;height:40px;border-radius:10px;background:var(--accent-blue-l);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🤖</div>
+              <div style="width:40px;height:40px;border-radius:10px;background:var(--accent-blue-l);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;" aria-hidden="true">🤖</div>
               <div>
                 <h4 style="font-family:var(--font-display);font-size:1rem;font-weight:700;margin-bottom:0.25rem;">AI-Enabled Processes</h4>
                 <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;">We are integrating modern technology to improve recruitment, attendance and facility management processes.</p>
               </div>
             </div>
             <div style="display:flex;gap:1rem;align-items:flex-start;">
-              <div style="width:40px;height:40px;border-radius:10px;background:var(--accent-blue-l);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🇮🇳</div>
+              <div style="width:40px;height:40px;border-radius:10px;background:var(--accent-blue-l);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;" aria-hidden="true">🇮🇳</div>
               <div>
                 <h4 style="font-family:var(--font-display);font-size:1rem;font-weight:700;margin-bottom:0.25rem;">Nationwide Ambition</h4>
                 <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;">Based in Bihar, with a Vision 2030 to expand our presence and impact across India.</p>
@@ -349,7 +391,7 @@
             <div style="font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:var(--accent-blue);margin-bottom:1rem;">Vision 2030</div>
             <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;margin-bottom:1rem;line-height:1.3;">Transforming Workplaces Across India</h3>
             <p style="font-size:0.9375rem;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:1.5rem;">By 2030, Gauri Prassan aims to be a trusted manpower outsourcing and facility management partner, serving government, healthcare, education and corporate organisations nationwide with AI-enabled, compliant and quality-driven operations.</p>
-            <a href="vision.html" class="btn btn--primary">Read Vision 2030</a>
+            <a href="/vision" class="btn btn--primary">Read Vision 2030</a>
           </div>
         </div>
       </div>
@@ -362,9 +404,9 @@
       <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.5rem);font-weight:800;color:white;margin-bottom:1rem;">Ready to Work with Gauri Prassan?</h2>
       <p style="font-size:1.0625rem;color:rgba(255,255,255,0.85);margin-bottom:2rem;max-width:520px;margin-left:auto;margin-right:auto;">Get in touch with our team for business enquiries, service information or partnership discussions.</p>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="contact.html" class="btn btn--secondary btn--lg">Contact Us</a>
-        <a href="contact.html" 
-           onclick="window.open('https://wa.me/919334166175','_blank','noopener,noreferrer');return false;" 
+        <a href="/contact" class="btn btn--secondary btn--lg">Contact Us</a>
+        <a href="https://wa.me/919334166175?text=Hello%20Gauri%20Prassan%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." 
+           target="_blank" rel="noopener noreferrer" 
            class="btn btn--lg" style="background:var(--wa-green);color:white;border-color:transparent;">
           💬 WhatsApp Us
         </a>
@@ -390,12 +432,14 @@
         <div>
           <h3 class="footer__col-title">Navigation</h3>
           <ul class="footer__links">
-            <li><a href="index.html" class="footer__link">Home</a></li>
-            <li><a href="about.html" class="footer__link">About Us</a></li>
-            <li><a href="services.html" class="footer__link">Services</a></li>
-            <li><a href="industries.html" class="footer__link">Industries</a></li>
-            <li><a href="vision.html" class="footer__link">Vision 2030</a></li>
-            <li><a href="contact.html" class="footer__link">Contact</a></li>
+            <li><a href="/" class="footer__link">Home</a></li>
+            <li><a href="/about" class="footer__link">About Us</a></li>
+            <li><a href="/services" class="footer__link">Services</a></li>
+            <li><a href="/industries" class="footer__link">Industries</a></li>
+            <li><a href="/vision" class="footer__link">Vision 2030</a></li>
+            <li><a href="/directors" class="footer__link">Directors</a></li>
+            <li><a href="/documents" class="footer__link">Documents</a></li>
+            <li><a href="/contact" class="footer__link">Contact</a></li>
           </ul>
         </div>
 
@@ -403,11 +447,11 @@
         <div>
           <h3 class="footer__col-title">Services</h3>
           <ul class="footer__links">
-            <li><a href="services.html" class="footer__link">Manpower Outsourcing</a></li>
-            <li><a href="services.html" class="footer__link">Facility Management</a></li>
-            <li><a href="services.html" class="footer__link">Recruitment Support</a></li>
-            <li><a href="services.html" class="footer__link">AI-Enabled Operations</a></li>
-            <li><a href="contact.html#ict-lab" class="footer__link">ICT Lab Enquiry</a></li>
+            <li><a href="/services#manpower" class="footer__link">Manpower Outsourcing</a></li>
+            <li><a href="/services#facility" class="footer__link">Facility Management</a></li>
+            <li><a href="/services#recruitment" class="footer__link">Recruitment Support</a></li>
+            <li><a href="/services#tech-ops" class="footer__link">AI-Enabled Operations</a></li>
+            <li><a href="/services#ict" class="footer__link">ICT Lab Solutions</a></li>
           </ul>
         </div>
 
@@ -431,8 +475,8 @@
             <div class="footer__contact-text">Ground Floor, Hanuman Nagar, Ward No. 4, Block-Arrah, Near Overbridge, Milki Anaith, Arrah, Bhojpur, Bihar – 802301</div>
           </div>
           <div style="margin-top:1rem;">
-            <a href="contact.html" 
-               onclick="window.open('https://wa.me/919334166175','_blank','noopener,noreferrer');return false;"
+            <a href="https://wa.me/919334166175?text=Hello%20Gauri%20Prassan%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." 
+               target="_blank" rel="noopener noreferrer"
                class="btn btn--wa btn--sm">💬 WhatsApp</a>
           </div>
         </div>
@@ -449,7 +493,7 @@
   </footer>
 
   <!-- WhatsApp FAB -->
-  <a href="#" onclick="window.open('https://wa.me/919334166175','_blank','noopener,noreferrer');return false;" class="wa-fab" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
+  <a href="https://wa.me/919334166175?text=Hello%20Gauri%20Prassan%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="wa-fab" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>

@@ -4,9 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Gauri Prassan — Manpower &amp; Facility Management</title>
-  <meta name="description" content="Learn about Gauriprassan Ventures Private Limited — a Bihar-based company delivering manpower outsourcing and facility management with trust, transparency and technology.">
-  <link rel="canonical" href="https://www.gauriprassan.com/about.html">
+  <meta name="description" content="Learn about Gauriprassan Ventures Private Limited (Gauri Prassan) — delivering compliant workforce outsourcing and facility management solutions across Bihar & India.">
+  <link rel="canonical" href="https://www.gauriprassan.com/about">
   <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.gauriprassan.com/about">
+  <meta property="og:title" content="About Us | Gauri Prassan — Manpower &amp; Facility Management">
+  <meta property="og:description" content="Learn about Gauriprassan Ventures Private Limited — manpower outsourcing and facility management built on trust and compliance.">
+  <meta property="og:image" content="https://www.gauriprassan.com/assets/images/about_team.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.gauriprassan.com/about">
+  <meta name="twitter:title" content="About Us | Gauri Prassan — Manpower &amp; Facility Management">
+  <meta name="twitter:description" content="Learn about Gauriprassan Ventures Private Limited — manpower outsourcing and facility management built on trust and compliance.">
+  <meta name="twitter:image" content="https://www.gauriprassan.com/assets/images/about_team.jpg">
+
+  <!-- Organization JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Gauri Prassan",
+    "legalName": "Gauriprassan Ventures Private Limited",
+    "url": "https://www.gauriprassan.com",
+    "logo": "https://www.gauriprassan.com/assets/images/logo.png",
+    "telephone": "+919334166175",
+    "email": "gauriprassanventures@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ground Floor, Hanuman Nagar, Ward No. 4, Block-Arrah, Near Overbridge, Milki Anaith",
+      "addressLocality": "Arrah, Bhojpur",
+      "addressRegion": "Bihar",
+      "postalCode": "802301",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="assets/css/design-system.css">
 </head>
 <body class="has-hiring-bar">
@@ -25,8 +63,8 @@
         </div>
       </div>
       <div class="hiring-bar__actions">
-        <a href="contact.html?type=hiring" class="hiring-bar__btn">Apply Now →</a>
-        <button type="button" class="hiring-bar__close" id="close-hiring-bar" aria-label="Dismiss notification" title="Dismiss notification">&times;</button>
+        <a href="/contact?type=hiring" class="hiring-bar__btn">Apply Now →</a>
+        <button type="button" class="hiring-bar__close" id="close-hiring-bar" aria-label="Dismiss hiring banner" title="Dismiss notification">&times;</button>
       </div>
     </div>
   </div>
@@ -34,7 +72,7 @@
   <nav class="navbar navbar--scrolled" role="navigation" aria-label="Main navigation">
     <div class="container">
       <div class="navbar__inner">
-        <a href="index.html" class="navbar__logo" aria-label="Gauriprassan Ventures — Home">
+        <a href="/" class="navbar__logo" aria-label="Gauriprassan Ventures — Home">
           <div class="navbar__logo-box">
             <img src="/images/logo.png" onerror="this.onerror=null;this.src='assets/images/logo.png';" alt="Gauriprassan Ventures Logo">
           </div>
@@ -44,37 +82,45 @@
           </div>
         </a>
         <div class="navbar__nav">
-          <a href="index.html" class="navbar__link">Home</a>
-          <a href="about.html" class="navbar__link navbar__link--active">About</a>
+          <a href="/" class="navbar__link">Home</a>
+          <a href="/about" class="navbar__link navbar__link--active">About</a>
           <div class="navbar__dropdown">
-            <a href="services.html" class="navbar__link navbar__dropdown-toggle">
+            <a href="/services" class="navbar__link navbar__dropdown-toggle">
               Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:2px;"><path d="m6 9 6 6 6-6"/></svg>
             </a>
             <div class="navbar__dropdown-menu">
               <div class="navbar__dropdown-title">Manpower Solutions</div>
-              <a href="services.html#manpower" class="navbar__dropdown-item">
-                <span class="navbar__dropdown-item-icon">👥</span>
+              <a href="/services#manpower" class="navbar__dropdown-item">
+                <span class="navbar__dropdown-item-icon" aria-hidden="true">👥</span>
                 <span>Manpower Outsourcing</span>
               </a>
-              <a href="services.html#facility" class="navbar__dropdown-item">
-                <span class="navbar__dropdown-item-icon">🏢</span>
+              <a href="/services#facility" class="navbar__dropdown-item">
+                <span class="navbar__dropdown-item-icon" aria-hidden="true">🏢</span>
                 <span>Facility Management</span>
               </a>
-              <a href="services.html#recruitment" class="navbar__dropdown-item">
-                <span class="navbar__dropdown-item-icon">🔍</span>
+              <a href="/services#recruitment" class="navbar__dropdown-item">
+                <span class="navbar__dropdown-item-icon" aria-hidden="true">🔍</span>
                 <span>Recruitment Support</span>
               </a>
-              <a href="services.html#ict" class="navbar__dropdown-item">
-                <span class="navbar__dropdown-item-icon">💻</span>
+              <a href="/services#tech-ops" class="navbar__dropdown-item">
+                <span class="navbar__dropdown-item-icon" aria-hidden="true">🤖</span>
+                <span>Tech-Enabled Operations</span>
+              </a>
+              <a href="/services#ict" class="navbar__dropdown-item">
+                <span class="navbar__dropdown-item-icon" aria-hidden="true">💻</span>
                 <span>ICT Lab Solutions</span>
+              </a>
+              <a href="/services#support" class="navbar__dropdown-item">
+                <span class="navbar__dropdown-item-icon" aria-hidden="true">📊</span>
+                <span>Operational Support</span>
               </a>
             </div>
           </div>
-          <a href="industries.html" class="navbar__link">Industries</a>
-          <a href="vision.html" class="navbar__link">Vision 2030</a>
-          <a href="directors.html" class="navbar__link">Directors</a>
-          <a href="documents.html" class="navbar__link">Documents</a>
-          <a href="contact.html" class="navbar__cta">Get in Touch</a>
+          <a href="/industries" class="navbar__link">Industries</a>
+          <a href="/vision" class="navbar__link">Vision 2030</a>
+          <a href="/directors" class="navbar__link">Directors</a>
+          <a href="/documents" class="navbar__link">Documents</a>
+          <a href="/contact" class="navbar__cta">Get in Touch</a>
         </div>
         <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
           <span class="navbar__toggle-bar"></span>
@@ -86,15 +132,15 @@
   </nav>
   <div class="navbar__drawer" id="mobile-drawer">
     <div class="navbar__drawer-links">
-      <a href="index.html" class="navbar__drawer-link">Home</a>
-      <a href="about.html" class="navbar__drawer-link navbar__link--active">About</a>
-      <a href="services.html" class="navbar__drawer-link">Services</a>
-      <a href="industries.html" class="navbar__drawer-link">Industries</a>
-      <a href="vision.html" class="navbar__drawer-link">Vision 2030</a>
-      <a href="directors.html" class="navbar__drawer-link">Directors</a>
-      <a href="documents.html" class="navbar__drawer-link">Documents</a>
+      <a href="/" class="navbar__drawer-link">Home</a>
+      <a href="/about" class="navbar__drawer-link navbar__link--active">About</a>
+      <a href="/services" class="navbar__drawer-link">Services</a>
+      <a href="/industries" class="navbar__drawer-link">Industries</a>
+      <a href="/vision" class="navbar__drawer-link">Vision 2030</a>
+      <a href="/directors" class="navbar__drawer-link">Directors</a>
+      <a href="/documents" class="navbar__drawer-link">Documents</a>
     </div>
-    <a href="contact.html" class="navbar__drawer-cta">Get in Touch →</a>
+    <a href="/contact" class="navbar__drawer-cta">Get in Touch →</a>
   </div>
 
   <!-- Page Hero -->
@@ -107,7 +153,7 @@
     <div class="container" style="position:relative;z-index:2;">
       <div class="page-hero__content">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="index.html">Home</a>
+          <a href="/">Home</a>
           <span class="breadcrumb__sep">/</span>
           <span class="breadcrumb__current" aria-current="page">About Us</span>
         </nav>
@@ -122,7 +168,7 @@
   <!-- Company Introduction -->
   <section class="section section--white">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+      <div class="grid-responsive-2">
         <div class="animate-on-scroll">
           <div class="section-label">Who We Are</div>
           <h2 class="section-title">India's Emerging Workforce Partner</h2>
@@ -178,32 +224,32 @@
 
       <div class="grid grid-3">
         <div class="card animate-on-scroll animate-delay-1">
-          <div class="card__icon">🤝</div>
+          <div class="card__icon" aria-hidden="true">🤝</div>
           <h3 class="card__title">Trust</h3>
           <p class="card__body">We build long-term relationships grounded in honesty and reliability. Our clients trust us with their workforce and facilities — we take that responsibility seriously.</p>
         </div>
         <div class="card animate-on-scroll animate-delay-2">
-          <div class="card__icon">🔍</div>
+          <div class="card__icon" aria-hidden="true">🔍</div>
           <h3 class="card__title">Transparency</h3>
           <p class="card__body">Open, clear communication in all our dealings. We provide honest reporting and maintain visibility in operations so clients always know where they stand.</p>
         </div>
         <div class="card animate-on-scroll animate-delay-3">
-          <div class="card__icon">⚖️</div>
+          <div class="card__icon" aria-hidden="true">⚖️</div>
           <h3 class="card__title">Compliance</h3>
           <p class="card__body">Adherence to industry standards and regulatory requirements is non-negotiable. We operate within the law and encourage the same in every engagement.</p>
         </div>
         <div class="card animate-on-scroll animate-delay-1">
-          <div class="card__icon">🤖</div>
+          <div class="card__icon" aria-hidden="true">🤖</div>
           <h3 class="card__title">Technology</h3>
           <p class="card__body">We are integrating AI-enabled tools for recruitment, attendance, analytics and facility management to deliver smarter, more efficient services.</p>
         </div>
         <div class="card animate-on-scroll animate-delay-2">
-          <div class="card__icon">⭐</div>
+          <div class="card__icon" aria-hidden="true">⭐</div>
           <h3 class="card__title">Quality</h3>
           <p class="card__body">Delivering work that meets and where possible exceeds expectations. We focus on service quality at every stage of the operational process.</p>
         </div>
         <div class="card animate-on-scroll animate-delay-3">
-          <div class="card__icon">🚀</div>
+          <div class="card__icon" aria-hidden="true">🚀</div>
           <h3 class="card__title">Growth</h3>
           <p class="card__body">With a Vision 2030 to expand nationwide, we are building for the future — both for our clients and for our organisation.</p>
         </div>
@@ -214,7 +260,7 @@
   <!-- Operational Approach -->
   <section class="section section--white">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:flex-start;">
+      <div class="grid-responsive-2--top">
         <div class="animate-on-scroll">
           <div class="section-label">Our Approach</div>
           <h2 class="section-title">How We Work</h2>
@@ -251,28 +297,28 @@
             <h3 style="font-family:var(--font-display);font-size:1.375rem;font-weight:700;margin-bottom:1.5rem;color:white;">Serving Diverse Sectors</h3>
             <div style="display:flex;flex-direction:column;gap:1rem;">
               <div style="display:flex;gap:0.75rem;align-items:center;">
-                <span style="font-size:1.25rem;">🏛️</span>
+                <span style="font-size:1.25rem;" aria-hidden="true">🏛️</span>
                 <div>
                   <div style="font-weight:600;font-size:0.9375rem;">Government</div>
                   <div style="font-size:0.8125rem;color:rgba(255,255,255,0.6);">Public sector bodies and departments</div>
                 </div>
               </div>
               <div style="display:flex;gap:0.75rem;align-items:center;">
-                <span style="font-size:1.25rem;">🏥</span>
+                <span style="font-size:1.25rem;" aria-hidden="true">🏥</span>
                 <div>
                   <div style="font-weight:600;font-size:0.9375rem;">Healthcare</div>
                   <div style="font-size:0.8125rem;color:rgba(255,255,255,0.6);">Hospitals and healthcare facilities</div>
                 </div>
               </div>
               <div style="display:flex;gap:0.75rem;align-items:center;">
-                <span style="font-size:1.25rem;">🎓</span>
+                <span style="font-size:1.25rem;" aria-hidden="true">🎓</span>
                 <div>
                   <div style="font-weight:600;font-size:0.9375rem;">Education</div>
                   <div style="font-size:0.8125rem;color:rgba(255,255,255,0.6);">Schools, colleges and institutions</div>
                 </div>
               </div>
               <div style="display:flex;gap:0.75rem;align-items:center;">
-                <span style="font-size:1.25rem;">🏢</span>
+                <span style="font-size:1.25rem;" aria-hidden="true">🏢</span>
                 <div>
                   <div style="font-weight:600;font-size:0.9375rem;">Corporate</div>
                   <div style="font-size:0.8125rem;color:rgba(255,255,255,0.6);">Private companies and enterprises</div>
@@ -280,7 +326,7 @@
               </div>
             </div>
             <div style="margin-top:2rem;">
-              <a href="contact.html" class="btn btn--primary btn--full">Enquire Now</a>
+              <a href="/contact" class="btn btn--primary btn--full">Enquire Now</a>
             </div>
           </div>
         </div>
@@ -294,8 +340,8 @@
       <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:white;margin-bottom:1rem;">Ready to Partner with Us?</h2>
       <p style="font-size:1.0625rem;color:rgba(255,255,255,0.85);margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto;">Contact our team to discuss your specific workforce or facility management requirements.</p>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="contact.html" class="btn btn--secondary btn--lg">Contact Us</a>
-        <a href="vision.html" class="btn btn--lg" style="background:rgba(255,255,255,0.15);color:white;border:2px solid rgba(255,255,255,0.3);">Read Vision 2030</a>
+        <a href="/contact" class="btn btn--secondary btn--lg">Contact Us</a>
+        <a href="/vision" class="btn btn--lg" style="background:rgba(255,255,255,0.15);color:white;border:2px solid rgba(255,255,255,0.3);">Read Vision 2030</a>
       </div>
     </div>
   </section>
@@ -310,26 +356,29 @@
             <span class="footer__logo-name">Gauri Prassan</span>
           </div>
           <p class="footer__desc">Gauriprassan Ventures Private Limited — delivering manpower outsourcing and facility management solutions with reliability, transparency and technology-enabled operations.</p>
+          <p style="font-size:0.75rem;color:rgba(255,255,255,0.25);font-style:italic;">Where Ideas Rise and Futures Shine</p>
         </div>
         <div>
           <h3 class="footer__col-title">Navigation</h3>
           <ul class="footer__links">
-            <li><a href="index.html" class="footer__link">Home</a></li>
-            <li><a href="about.html" class="footer__link">About Us</a></li>
-            <li><a href="services.html" class="footer__link">Services</a></li>
-            <li><a href="industries.html" class="footer__link">Industries</a></li>
-            <li><a href="vision.html" class="footer__link">Vision 2030</a></li>
-            <li><a href="contact.html" class="footer__link">Contact</a></li>
+            <li><a href="/" class="footer__link">Home</a></li>
+            <li><a href="/about" class="footer__link">About Us</a></li>
+            <li><a href="/services" class="footer__link">Services</a></li>
+            <li><a href="/industries" class="footer__link">Industries</a></li>
+            <li><a href="/vision" class="footer__link">Vision 2030</a></li>
+            <li><a href="/directors" class="footer__link">Directors</a></li>
+            <li><a href="/documents" class="footer__link">Documents</a></li>
+            <li><a href="/contact" class="footer__link">Contact</a></li>
           </ul>
         </div>
         <div>
           <h3 class="footer__col-title">Services</h3>
           <ul class="footer__links">
-            <li><a href="services.html" class="footer__link">Manpower Outsourcing</a></li>
-            <li><a href="services.html" class="footer__link">Facility Management</a></li>
-            <li><a href="services.html" class="footer__link">Recruitment Support</a></li>
-            <li><a href="services.html" class="footer__link">AI-Enabled Operations</a></li>
-            <li><a href="contact.html#ict-lab" class="footer__link">ICT Lab Enquiry</a></li>
+            <li><a href="/services#manpower" class="footer__link">Manpower Outsourcing</a></li>
+            <li><a href="/services#facility" class="footer__link">Facility Management</a></li>
+            <li><a href="/services#recruitment" class="footer__link">Recruitment Support</a></li>
+            <li><a href="/services#tech-ops" class="footer__link">AI-Enabled Operations</a></li>
+            <li><a href="/services#ict" class="footer__link">ICT Lab Solutions</a></li>
           </ul>
         </div>
         <div>
@@ -346,18 +395,23 @@
           </div>
           <div class="footer__contact-item">
             <span class="footer__contact-icon">📍</span>
-            <div class="footer__contact-text">Arrah, Bhojpur, Bihar – 802301</div>
+            <div class="footer__contact-text">Ground Floor, Hanuman Nagar, Ward No. 4, Block-Arrah, Near Overbridge, Milki Anaith, Arrah, Bhojpur, Bihar – 802301</div>
+          </div>
+          <div style="margin-top:1rem;">
+            <a href="https://wa.me/919334166175?text=Hello%20Gauri%20Prassan%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." 
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn--wa btn--sm">💬 WhatsApp</a>
           </div>
         </div>
       </div>
       <div class="footer__bottom">
         <p class="footer__copyright">© <span class="js-year">2026</span> Gauriprassan Ventures Private Limited. All rights reserved.</p>
-        <p class="footer__legal">CIN: U78300BR2024PTC068100 &nbsp;|&nbsp; GSTIN: 10AALCG0831H1Z3</p>
+        <p class="footer__legal">CIN: U78300BR2024PTC068100 &nbsp;|&nbsp; GSTIN: 10AALCG0831H1Z3 &nbsp;|&nbsp; Incorporated 4 March 2024</p>
       </div>
     </div>
   </footer>
 
-  <a href="#" onclick="window.open('https://wa.me/919334166175','_blank','noopener,noreferrer');return false;" class="wa-fab" aria-label="Chat with us on WhatsApp">
+  <a href="https://wa.me/919334166175?text=Hello%20Gauri%20Prassan%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="wa-fab" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
