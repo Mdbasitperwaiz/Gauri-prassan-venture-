@@ -1,15 +1,7 @@
-/// <reference types="node" />
-
 declare module 'react' {
+  const React: any;
+  export default React;
   export = React;
-  export as namespace React;
-  namespace React {
-    type ReactNode = any;
-    type ReactElement = any;
-    type FC<P = {}> = (props: P) => ReactElement | null;
-    function useState<T>(initial: T): [T, (val: T | ((prev: T) => T)) => void];
-    function useEffect(effect: () => void | (() => void), deps?: any[]): void;
-  }
 }
 
 declare module 'react/jsx-runtime' {
@@ -25,51 +17,34 @@ declare namespace JSX {
 }
 
 declare module 'next/link' {
-  import React from 'react';
-  interface LinkProps {
-    href: string;
-    className?: string;
-    children?: React.ReactNode;
-    [key: string]: any;
-  }
-  const Link: React.FC<LinkProps>;
+  const Link: any;
   export default Link;
 }
 
 declare module 'next/image' {
-  import React from 'react';
-  interface ImageProps {
-    src: string;
-    alt: string;
-    width?: number;
-    height?: number;
-    fill?: boolean;
-    className?: string;
-    priority?: boolean;
-    [key: string]: any;
-  }
-  const Image: React.FC<ImageProps>;
+  const Image: any;
   export default Image;
 }
 
 declare module 'lucide-react' {
-  import React from 'react';
-  export const ArrowRight: React.FC<any>;
-  export const CheckCircle2: React.FC<any>;
-  export const ShieldCheck: React.FC<any>;
-  export const Users: React.FC<any>;
-  export const Building: React.FC<any>;
-  export const Award: React.FC<any>;
-  export const Phone: React.FC<any>;
-  export const Mail: React.FC<any>;
-  export const MapPin: React.FC<any>;
-  export const Clock: React.FC<any>;
-  export const ChevronDown: React.FC<any>;
-  export const Menu: React.FC<any>;
-  export const X: React.FC<any>;
-  export const ExternalLink: React.FC<any>;
-  export const FileText: React.FC<any>;
-  export const Download: React.FC<any>;
-  export const Copy: React.FC<any>;
-  export const Check: React.FC<any>;
+  export const ArrowRight: any;
+  export const CheckCircle2: any;
+  export const ShieldCheck: any;
+  export const Users: any;
+  export const Building: any;
+  export const Award: any;
+  export const Phone: any;
+  export const Mail: any;
+  export const MapPin: any;
+  export const Clock: any;
+  export const ChevronDown: any;
+  export const Menu: any;
+  export const X: any;
+  export const ExternalLink: any;
+  export const FileText: any;
+  export const Download: any;
+  export const Copy: any;
+  export const Check: any;
+  const all: any;
+  export default all;
 }
